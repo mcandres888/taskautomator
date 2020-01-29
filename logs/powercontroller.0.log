@@ -1,0 +1,48 @@
+('worker class ', 'powercontroller')
+{u'status': u'on queue', u'date_queued': u'01/27/2020, 20:24:51', u'date_finished': u'', u'callback': u'', u'input': {u'action': u'switchon', u'outletdata': {u'pc_id': 1, u'status': u'OFF', u'outlet_id': 8, u'id': 8, u'name': u'Outlet 8'}, u'outletid': 8, u'powercontrollerdata': {u'status': None, u'username': u'admin', u'name': u'Bing Office', u'type': u'digitalloggers', u'location': u'Office ni Bing', u'password': u'br3w3d888', u'ip_address': u'192.168.2.6', u'id': 1}}, u'output': u'', u'type': u'powercontroller', u'id': 8}
+<HTML><HEAD>
+
+<META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+</HEAD><BODY></BODY>
+</HTML>
+{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}
+{'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}
+{'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}
+{'state': u'OFF', 'id': u'4', 'name': u'Balcony'}
+{'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}
+{'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}
+{'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}
+{'state': u'ON', 'id': u'8', 'name': u'Outlet 8'}
+[{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}, {'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}, {'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}, {'state': u'OFF', 'id': u'4', 'name': u'Balcony'}, {'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}, {'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}, {'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}, {'state': u'ON', 'id': u'8', 'name': u'Outlet 8'}]
+{u'status': u'ok'}
+('worker class ', 'powercontroller')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 13:35:30', u'date_finished': u'', u'callback': u'', u'input': {u'action': u'populate', u'powercontrollerdata': {u'status': None, u'username': u'admin', u'name': u'Bing Office', u'type': u'digitalloggers', u'location': u'Office ni Bing', u'password': u'br3w3d888', u'ip_address': u'192.168.2.6', u'id': 1}}, u'output': u'', u'type': u'powercontroller', u'id': 16}
+{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}
+{'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}
+{'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}
+{'state': u'OFF', 'id': u'4', 'name': u'Balcony'}
+{'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}
+{'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}
+{'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}
+{'state': u'ON', 'id': u'8', 'name': u'Outlet 8'}
+[{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}, {'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}, {'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}, {'state': u'OFF', 'id': u'4', 'name': u'Balcony'}, {'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}, {'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}, {'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}, {'state': u'ON', 'id': u'8', 'name': u'Outlet 8'}]
+{u'status': u'ok'}
+('worker class ', 'powercontroller')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 13:35:42', u'date_finished': u'', u'callback': u'', u'input': {u'action': u'switchoff', u'outletdata': {u'pc_id': 1, u'status': u'ON', u'outlet_id': 8, u'id': 8, u'name': u'Outlet 8'}, u'outletid': 8, u'powercontrollerdata': {u'status': None, u'username': u'admin', u'name': u'Bing Office', u'type': u'digitalloggers', u'location': u'Office ni Bing', u'password': u'br3w3d888', u'ip_address': u'192.168.2.6', u'id': 1}}, u'output': u'', u'type': u'powercontroller', u'id': 17}
+<HTML><HEAD>
+
+<META HTTP-EQUIV="refresh" content="0; URL=/index.htm">
+
+</HEAD><BODY></BODY>
+</HTML>
+{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}
+{'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}
+{'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}
+{'state': u'OFF', 'id': u'4', 'name': u'Balcony'}
+{'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}
+{'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}
+{'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}
+{'state': u'OFF', 'id': u'8', 'name': u'Outlet 8'}
+[{'state': u'OFF', 'id': u'1', 'name': u'Hot Pot'}, {'state': u'OFF', 'id': u'2', 'name': u'Outlet 2'}, {'state': u'OFF', 'id': u'3', 'name': u'Outlet 3'}, {'state': u'OFF', 'id': u'4', 'name': u'Balcony'}, {'state': u'OFF', 'id': u'5', 'name': u'Outlet 5'}, {'state': u'OFF', 'id': u'6', 'name': u'Outlet 6'}, {'state': u'OFF', 'id': u'7', 'name': u'Outlet 7'}, {'state': u'OFF', 'id': u'8', 'name': u'Outlet 8'}]
+{u'status': u'ok'}

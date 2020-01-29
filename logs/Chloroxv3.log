@@ -1,0 +1,96 @@
+Exception on /server/uname/update/1 [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 319, in server_uname_update
+    app.Server.update(temp)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/baseModel.py", line 144, in update
+    query_str = self.create_update_string(json_data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/baseModel.py", line 246, in create_update_string
+    query_str += "%s='%s', " % (self.columns[i], self.escape(json_data[self.columns[i]]))
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/baseModel.py", line 256, in escape
+    data_str = data.replace("'", "\\'")
+AttributeError: 'dict' object has no attribute 'replace'
+Exception on /tasks/list [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 159, in tasks_list
+    return app.admin.tasks_list()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/controllers/adminController.py", line 64, in tasks_list
+    data = self._app.TaskModel.tableData(request.args)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/taskModel.py", line 53, in tableData
+    result = self.db.fetch_query(query_str)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/library/dbfactory.py", line 18, in fetch_query
+    self.cur.execute(query_str)
+OperationalError: near "DESC": syntax error
+Exception on /tasks/list [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "main.py", line 159, in tasks_list
+    return app.admin.tasks_list()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/controllers/adminController.py", line 64, in tasks_list
+    data = self._app.TaskModel.tableData(request.args)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/taskModel.py", line 53, in tableData
+    result = self.db.fetch_query(query_str)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/library/dbfactory.py", line 18, in fetch_query
+    self.cur.execute(query_str)
+OperationalError: near "ORDER": syntax error
+Exception on /tasks [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1988, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1641, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1544, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1639, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1625, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/site-packages/flask_login/utils.py", line 259, in decorated_view
+    elif not current_user.is_authenticated:
+  File "/usr/local/lib/python2.7/site-packages/werkzeug/local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/site-packages/werkzeug/local.py", line 307, in _get_current_object
+    return self.__local()
+  File "/usr/local/lib/python2.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/usr/local/lib/python2.7/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python2.7/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/usr/local/lib/python2.7/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "main.py", line 116, in user_loader
+    return app.UserModel.user_loader(userid)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/models/userModel.py", line 50, in user_loader
+    result = self.db.fetch_one(query_str)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/library/dbfactory.py", line 26, in fetch_one
+    data = self.cur.fetchone()
+ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 123145382785024 and this is thread id 123145378578432.

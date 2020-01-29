@@ -1,0 +1,225 @@
+{% macro machineButtons(data) -%}
+                  <div class="input-group">
+                  <input type="text" name="message" readonly value="{{data['item']}}" placeholder="" class="form-control">
+                      <span class="input-group-btn">
+                        {% if data['status'] == 'open' %}
+
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-{{data['db_id']}}"> Activate </button>
+
+                        {% elif data['status'] == 'vending' %}
+                            <button type="button" class="btn btn-warning"> Vending </button>
+
+                        {% elif data['status'] == 'done' %}
+                            <button type="button" class="btn btn-default"> Done </button>
+
+                        {% else %}
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-{{data['db_id']}}"> Close </button>
+                        {% endif %}
+                      </span>
+                   </div>
+{% endmacro -%}
+
+
+{% macro availableMachinesButton(data) -%}
+
+   {% for x in data['machines'] -%}
+    <div class="col col-xs-2" style="margin-bottom:5px;"> 
+      <form method="POST" action="machinecontrol/activate">
+        <input type="hidden" name="id" value="{{data['id']}}" />
+        <input type="hidden" name="db_id" value="{{data['db_id']}}" />
+        <input type="hidden" name="machine_id" value="{{x['id']}}" />
+        <input type="hidden" name="machine_name" value="{{x['name']}}" />
+        <input type="hidden" name="machine_cycle" value="{{data['machine_cycle']}}" />
+        <input type="hidden" name="srp" value="{{data['srp']}}" />
+        <button type="submit" class="btn btn-primary"> {{x['name']}}</button>
+      </form>
+    </div>
+   {% endfor -%}
+
+{% endmacro -%}
+
+
+
+
+{% macro machineModal(data) -%}
+
+    {% if data['status'] == 'open' %}
+        <div class="modal fade" id="modal-{{data['db_id']}}">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Available {{data['machine_size']}} {{data['machine_type']}} machine</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  {{ availableMachinesButton(data)}}
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    {% else %}
+        <div class="modal fade" id="modal-{{data['db_id']}}">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Close Machine</h4>
+              </div>
+              <div class="modal-body">
+                <p>Reuse {{data['item']}}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+
+
+            <form method="POST" action="machinecontrol/close">
+
+                <input type="hidden" name="id" value="{{data['id']}}" />
+                <input type="hidden" name="db_id" value="{{data['db_id']}}" />
+                <input type="hidden" name="machine_id" value="{{data['network_node']}}" />
+                <button type="submit" class="btn btn-danger ">Close</button>
+            </form>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    {% endif %}
+
+
+
+{% endmacro -%}
+
+{% macro transactionModal(data) -%}
+   {% for x in data['machine_requests']-%}
+       {{ machineModal(x)}}
+   {% endfor -%}
+{% endmacro -%}
+
+{% macro transactionCard(data) -%}
+       <div class="col-md-3">
+          <!-- DIRECT CHAT PRIMARY -->
+          <div class="box box-{{ data['box_color']}} direct-chat direct-chat-{{ data['box_color'] }}">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{ data['customer_name']}}</h3>
+
+              <div class="box-tools pull-right">
+                <span data-toggle="tooltip" title="{{ data['machine_len'] }} Machine Requests" class="badge {{ data['badge_color'] }}">{{ data['machine_len']}}</span>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <a href="/machinecontrol/closetransaction/{{data['id']}}"><button type="button" class="btn btn-box-tool"><i class="fa fa-times"></i></button></a>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <!-- Conversations are loaded here -->
+              <div class="direct-chat-messages">
+                <!-- Message. Default to the left -->
+
+                <div class="direct-chat-msg">
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-timestamp pull-right">{{ data['created_at']}}</span>
+                  </div>
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-left">TID: {{ data['receipt_no']}}</span>
+                  </div>
+
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-left">STATUS: {{ data['status']}}</span>
+                  </div>
+                  <!-- /.direct-chat-text -->
+                </div>
+
+
+                <div class="direct-chat-msg">
+
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-timestamp pull-right">Machines</span>
+                  </div>
+
+
+                 {% for x in data['machine_requests']-%}
+                  <div class="direct-chat-info clearfix">
+                   {{ machineButtons(x)}}
+                  </div>
+                 {% endfor -%}
+                </div>
+
+              </div>
+              <!--/.direct-chat-messages-->
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+<!--
+              <form action="#" method="post">
+                <div class="input-group">
+                  <input type="text" name="message" readonly value="dsfasdfasdfsd" placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary btn-flat">Send</button>
+                      </span>
+                </div>
+              </form>
+-->
+
+            </div>
+            <!-- /.box-footer-->
+          </div>
+          <!--/.direct-chat -->
+        </div>
+        <!-- /.col -->
+{% endmacro -%}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        {{data['subData']['titleFirst']}}
+        <small>{{data['subData']['titleSecond']}}</small>
+      </h1>
+      <ol class="breadcrumb">
+
+        <a href="/refresh">
+         <button type="submit" class="btn btn-success">Refresh</button>
+        </a>
+        <a href="/api/resend">
+         <button type="submit" class="btn btn-warning">Resend</button>
+        </a>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+    
+      <div class="row">
+      {% set _counter = 1 %}
+      {% for x in data['transactionData']-%}
+         {% if ( _counter % 4 ) == 0 -%}
+          </div>
+          <div class="row">
+         {% endif -%}
+         {{ transactionCard(x)}}
+         {{ transactionModal(x)}}
+         {% set _counter = _counter + 1 %}
+      {% endfor -%}
+
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

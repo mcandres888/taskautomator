@@ -1,0 +1,16 @@
+{% extends "base2.html" %}
+{# set parent data #}
+{% block title %}{{ data['title']}}{% endblock %}
+{% block head_additional %}
+
+{% endblock head_additional %}
+
+{% block content%}
+
+{% include data['tableHtml'] %}
+                                           
+{% endblock content %}
+
+{% block footer_script %}
+    $.widget.bridge('uibutton', $.ui.button);
+{% endblock %}

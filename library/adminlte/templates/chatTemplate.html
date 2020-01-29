@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{# set parent data #}
+{% block title %}{{ data['title']}}{% endblock %}
+
+{% block head_additional %}
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{{data['domain']}}static/plugins/iCheck/flat/blue.css">              
+  <link rel="stylesheet" href="static/plugins/iCheck/square/blue.css">            
+<link rel="stylesheet" href="static/plugins/datatables/dataTables.bootstrap.css"> 
+  <!-- Morris chart -->                                                           
+  <link rel="stylesheet" href="static/plugins/morris/morris.css">                 
+  <!-- jvectormap -->                                                             
+  <link rel="stylesheet" href="static/plugins/jvectormap/jquery-jvectormap-1.2.2.css">          
+  <!-- Date Picker -->                                                            
+  <link rel="stylesheet" href="static/plugins/datepicker/datepicker3.css">        
+  <!-- Daterange picker -->                                                       
+  <link rel="stylesheet" href="static/plugins/daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->                                      
+  <link rel="stylesheet" href="static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+
+{% endblock head_additional %}
+{% block header_script %} {% endblock %}
+
+{% block content%}
+
+{% include "chat.html" %}
+                                           
+{% endblock content %}
+
+{% block add_footer_script %}
+
+{% include "chatbotscript.js" %}
+{% endblock %}
+
+{% block footer_script %}
+    $.widget.bridge('uibutton', $.ui.button);
+{% endblock %}

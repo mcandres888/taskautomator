@@ -1,0 +1,701 @@
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+No handlers could be found for logger "root"
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:45:36', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 11}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:49:30', u'date_finished': u'', u'callback': u'server/uname/update/2', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu samba', u'type': u'samba', u'username': u'mcandres', u'location': u'192.168.2.16', u'ip_address': u'192.168.2.16', u'id': 2}}, u'output': u'', u'type': u'fabric', u'id': 14}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:49:30', u'date_finished': u'', u'callback': u'server/uname/update/2', u'input': {u'action': u'uname', u'serverdata': {u'info': None, u'status': None, u'name': u'ubuntu samba', u'type': u'samba', u'username': u'mcandres', u'location': u'192.168.2.16', u'ip_address': u'192.168.2.16', u'id': 2}}, u'output': u'', u'type': u'fabric', u'id': 14}
+Traceback (most recent call last):
+  File "DaemonRun.py", line 45, in <module>
+    prototype.start()
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 50, in start
+    retval = self.runbyaction(x['input'])
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 35, in runbyaction
+    retval = self.send_uname_cmd(data)
+  File "/Users/mcandres/sandbox/PACIFIC_NORTHSTAR/ssbautomator/daemons/fabricworker/fabricWorker.py", line 19, in send_uname_cmd
+    result = Connection(ip_address).run('uname -s', hide=True)
+  File "<decorator-gen-3>", line 2, in run
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 30, in opens
+    return method(self, *args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/fabric/connection.py", line 721, in run
+    return self._run(self._remote_runner(), command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/context.py", line 101, in _run
+    return runner.run(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    return self._run_body(command, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 404, in _run_body
+    self._setup(command, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 385, in _setup
+    self.encoding = self.opts["encoding"] or self.default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1079, in default_encoding
+    return default_encoding()
+  File "/usr/local/lib/python2.7/site-packages/invoke/runners.py", line 1598, in default_encoding
+    default = locale.getdefaultlocale()[1]
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 545, in getdefaultlocale
+    return _parse_localename(localename)
+  File "/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/locale.py", line 477, in _parse_localename
+    raise ValueError, 'unknown locale: %s' % localename
+ValueError: unknown locale: UTF-8
+('worker class ', 'fabric')
+('worker class ', 'fabric')
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:51:03', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': u'{"uname": "Linux"}', u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 15}
+{u'status': u'on queue', u'date_queued': u'01/29/2020, 12:51:03', u'date_finished': u'', u'callback': u'server/uname/update/1', u'input': {u'action': u'uname', u'serverdata': {u'info': u'{"uname": "Linux"}', u'status': None, u'name': u'ubuntu sandbox', u'type': u'samba', u'username': u'mcandres', u'location': u'table', u'ip_address': u'192.168.2.17', u'id': 1}}, u'output': u'', u'type': u'fabric', u'id': 15}
+{'uname': 'Linux'}
+{u'status': u'ok'}

@@ -1,0 +1,117 @@
+<html>
+<head>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+ <link rel="stylesheet" href="/static/css/demos.css">
+</head>
+<body>
+
+    <div id="map"></div>
+<script>
+  var map;
+  var marker1;
+  var marker2;
+  var marker3;
+  var myLatLng = {lat: 14.554574, lng: 121.020986};
+  var path;
+  var service;
+  var poly;
+  function initMap() {
+    path = new google.maps.MVCArray();
+    service = new google.maps.DirectionsService();
+    poly = new google.maps.Polyline({map: map, strokeColor: '#4986E7'});
+                
+    // Create a map object and specify the DOM element for display.
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 14.554574, lng: 121.020986},
+      zoom: 16 
+    });
+            // Create a marker and set its position.
+    marker1 = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Truck1'
+    });
+    marker2 = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Truck2'
+    });
+    marker3 = new google.maps.Marker({
+      map: map,
+      position: myLatLng,
+      title: 'Truck3'
+    });
+
+
+  }
+
+
+function movepointer(map, marker, myLatLng ) {
+  marker.setPosition(myLatLng);
+  //map.panTo(myLatLng);
+
+  var src = myLatLng;//start point
+  var des = myLatLng;// should be the destination
+  path.push(src);
+  poly.setPath(path);
+  service.route({
+    origin: src,
+    destination: des,
+    travelMode: google.maps.DirectionsTravelMode.DRIVING
+  }, function(result, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      for (var i = 0, len = result.routes[0].overview_path.length; i < len; i++) {
+        path.push(result.routes[0].overview_path[i]);
+      }
+    }
+  });
+} 
+
+$(document).ready(function(){
+  namespace = '/aviso';
+  var socket = io.connect('ws://' + document.domain + ":5000" + namespace);
+
+  socket.on('connect', function() {
+    socket.emit('join', {username: "test" , room: "gps" });
+
+  });
+  socket.on('disconnect', function() {
+    console.log("Disconnected");
+  });
+  socket.on('response', function(msg) {
+    console.log("response >> " + msg.data );
+  });
+
+  socket.on('gps_update', function(msg) {
+    console.log(msg.data );
+    newLatLng = new google.maps.LatLng(msg.data.latitude, msg.data.longitude);
+
+    if (msg.data.device_id == "123456" ) {
+       movepointer(map, marker1, newLatLng);
+    }
+
+    if (msg.data.device_id == "54321" ) {
+       movepointer(map, marker2, newLatLng);
+    }
+
+    if (msg.data.device_id == "88888" ) {
+       movepointer(map, marker3, newLatLng);
+    }
+  });
+
+
+
+
+}); 
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm1JXupTwmUfzmG8GPT8fzbcyLj_tKPxo&callback=initMap" async defer>
+</script>
+
+
+
+</body>
+</html>
+
