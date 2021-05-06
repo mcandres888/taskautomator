@@ -1,7 +1,7 @@
 Flask==0.11.1
 flasgger==0.5.14
 requests==2.13.0
-flask-cors==3.0.6
+flask-cors==3.0.9
 flask_rq2==17.0
 kombu==4.2.1
 git+https://github.com/mcandres888/python-socketio.git@master#egg=python-socketio
